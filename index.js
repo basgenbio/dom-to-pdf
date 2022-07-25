@@ -251,7 +251,7 @@ downloadPdf = (dom, options, cb) => {
     if (typeof cb === "function") {
       cb(pdf);
     }
-    return pdf.save(filename);
+    return pdf.output('bloburi');
   }).catch(error => {
     // Remove overlay
     document.body.removeChild(overlay);
